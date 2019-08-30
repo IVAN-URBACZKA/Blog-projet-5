@@ -18,7 +18,7 @@ class UserManager
         $req->bindValue(':email', $user->getEmail());
 
         $req->execute();
-        
+        $req->closeCursor();
         return $req;
         
 
