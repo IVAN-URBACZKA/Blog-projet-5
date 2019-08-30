@@ -22,7 +22,7 @@
     
     
     </ul>
-    <a href="index.php?action=adduser" >Inscription</a>
+    <a href="index.php?action=register" >Inscription</a>
     </form>
   </div>
 </nav>
