@@ -53,7 +53,7 @@ class User
   
   public function getFirstname(){
   
-      return $this->_firstName;
+      return $this->_firstname;
   
   }
 

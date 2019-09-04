@@ -15,8 +15,14 @@ function addUser()
     $user = new User($datas);
 
     $manager = new UserManager();
+    
+    $result = $manager->addUser($user);
 
-    $manager->addUser($user);
+    if($result)
+            {
+                header("Location: index.php");
+            }
+
 
 }
 
