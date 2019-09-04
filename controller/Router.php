@@ -4,8 +4,7 @@ require('controller/frontend.php');
 require('controller/backend.php');
 
 class Router {
-
-
+  
 public function routerRequest()
 {
 
@@ -26,7 +25,6 @@ try {
         elseif($_GET['action'] == 'register'){
             register();
         }
-
 
         elseif ($_GET['action'] == 'article') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
