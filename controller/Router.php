@@ -26,6 +26,18 @@ try {
             register();
         }
 
+        elseif($_GET['action'] == 'registerpasserror'){
+            registerPassError();
+        }
+
+        elseif($_GET['action'] == 'loginform'){
+            loginForm();
+        }
+
+        elseif($_GET['action'] == 'connexion'){
+            connexion();
+        }
+
         elseif ($_GET['action'] == 'article') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 article();

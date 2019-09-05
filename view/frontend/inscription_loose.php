@@ -1,0 +1,1 @@
+<?php echo "Les pass ne sont pas identique" ?>

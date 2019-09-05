@@ -23,6 +23,7 @@
     
     </ul>
     <a href="index.php?action=register" >Inscription</a>
+    <a href="index.php?action=loginform" >Connexion</a>
     </form>
   </div>
 </nav>

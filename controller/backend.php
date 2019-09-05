@@ -2,6 +2,8 @@
 
 require_once('model/UserManager.php');
 
+//--------------------------------------------------------
+
 function addUser()
 {
     
@@ -12,12 +14,12 @@ function addUser()
         if($_POST['pass'] == $_POST['pass_verification']){
 
             if(!$manager->checkPseudo($_POST['pseudo'])) {
-     
+
         $datas = [];
         $datas['pseudo'] = $_POST['pseudo'];
         $datas['surname'] = $_POST['surname'];
         $datas['firstname'] = $_POST['firstname'];
-        $datas['pass'] = $_POST['pass'];
+        $datas['pass'] = password_hash($_POST['pass'], PASSWORD_DEFAULT);
         $datas['email'] = $_POST['email'];
     
         $user = new User($datas);
@@ -36,15 +38,47 @@ else{
 
 }
 
+else 
+{
+    header("Location: index.php?action=registerpasserror");
 }
 
 }
+
+}
+
+function connexion()
+{
+
+
+
+
+
+    
+}
+
+//--------------------------------------------------------------------------------
+
+
+
+
+//------------------------------- VIEW --------------------------------------------
 
 function register()
 {
   require("view/frontend/user.php");
 }
 
+function registerPassError()
+{
+  require("view/frontend/inscription_loose.php");
+}
+
+function loginForm()
+{
+  require("view/frontend/connexion.php");
+}
 
 
+//---------------------------------------------------------------------------------
 
