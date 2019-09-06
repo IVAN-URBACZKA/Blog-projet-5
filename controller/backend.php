@@ -1,6 +1,7 @@
 <?php
 
 require_once('model/UserManager.php');
+require_once('model/ConnexionManager.php');
 
 //--------------------------------------------------------
 
@@ -50,11 +51,41 @@ else
 function connexion()
 {
 
+  if(isset($_POST['pseudo_connexion'] ) & isset($_POST['pass_connexion'])){
 
 
+         $manager = new ConnexionManager();
 
+         $result = $manager->getConnexion($_POST['pseudo_connexion']);
+
+         $isPasswordCorrect = password_verify($_POST['pass_connexion'], $result['pass']);
+
+         if (!$result)
+         {
+             echo 'Mauvais identifiant ou mot de passe !';
+         }
+         
+         else{
+         
+           if($isPasswordCorrect)
+           {
+             session_start();
+             $_SESSION['id'] = $result['id'];
+             $_SESSION['pseudo'] = $result['pseudo'];
+             echo 'Vous êtes connecté !';
+           }
+         
+           else
+           {
+             echo 'Mauvais identifiant ou mot de passe !';
+         
+           }
+         
+         }
 
     
+}
+
 }
 
 //--------------------------------------------------------------------------------

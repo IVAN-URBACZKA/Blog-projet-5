@@ -10,7 +10,7 @@
 
 
 
-<form  id="formulaire" action="connexion_post.php" method="post"  >
+<form  id="formulaire" action="index.php?action=connexion" method="post"  >
 
 
 <label>Pseudo</label>
