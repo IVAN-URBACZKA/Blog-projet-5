@@ -30,12 +30,24 @@ try {
             registerPassError();
         }
 
+        elseif($_GET['action'] == 'addarticle'){
+            addArticle();
+        }
+
+        elseif($_GET['action'] == 'writeArticle'){
+            writeArticle();
+        }
+
         elseif($_GET['action'] == 'loginform'){
             loginForm();
         }
 
         elseif($_GET['action'] == 'connexion'){
             connexion();
+        }
+
+        elseif($_GET['action'] == 'deconnexion'){
+            deconnexion();
         }
 
         elseif ($_GET['action'] == 'article') {

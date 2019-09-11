@@ -1,11 +1,11 @@
-<?php $title = "Mon Blog" ?>
-
-<?php $introduce = "Bienvenue sur mon Blog" ?>
-
-<?php $button = "En savoir plus" ?>
+<?php 
+$title = "Mon Blog"; 
+$introduce = "Bienvenue sur mon Blog";
+$button = "Ecrire un article"; 
+$href = "index.php?action=writeArticle";
+?>
 
 <?php ob_start(); ?>
-
 
 <div class="container">
     <!-- Example row of columns -->

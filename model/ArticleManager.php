@@ -24,4 +24,9 @@ class ArticleManager extends Manager{
     return $article;
 }
 
+Public function addArticle()
+{
+    
+}
+
 }
