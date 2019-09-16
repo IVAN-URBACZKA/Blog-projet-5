@@ -60,6 +60,28 @@ try {
             }
 }
 
+        elseif($_GET['action'] == 'updatedarticleform'){
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                updatedArticleForm();
+            }
+            
+            }
+
+            elseif($_GET['action'] == 'updatedarticle'){
+                if (isset($_GET['id']) && $_GET['id'] > 0) {
+                    updatedArticle();
+                }
+                
+                }
+
+                elseif($_GET['action'] == 'deletedarticle'){
+                    if (isset($_GET['id']) && $_GET['id'] > 0) {
+                        deletedArticle();
+                    }
+                    
+                    }
+
+
 }
 
 else {

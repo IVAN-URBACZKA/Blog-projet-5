@@ -94,21 +94,74 @@ function connexion()
 function addArticle()
 {
   $manager = new ArticleManager();
+  
+  if(isset($_POST['chapo'] ) & isset($_POST['content']))
+  {
+    session_start();
+    $datas = [];
+    $datas['user_id'] = (int)$_SESSION['id'];
+    $datas['chapo'] = $_POST['chapo'];
+    $datas['content'] = $_POST['content'];
+    $datas['created'] = date("Y-m-d H:i:s");
+    $datas['updated'] = date("Y-m-d H:i:s");
+
+    $article = new Article($datas);
+
+    $result = $manager->addArticle($article);
+
+    if($result)
+            {
+                header("Location: index.php");
+            }
+}
+
+
+}
+
+function updatedArticle()
+{
+
+  $manager = new ArticleManager();
 
   if(isset($_POST['chapo'] ) & isset($_POST['content']))
   {
-    // $datas = [];
-    // $datas['id'] = $_POST['id'];
-    // $datas['chapo'] = $_POST['chapo'];
-    // $datas['content'] = $_POST['content'];
+    session_start();
+    $datas['id'] = $_GET['id'];
+    $datas['user_id'] = (int)$_SESSION['id'];
+    $datas['chapo'] = $_POST['chapo'];
+    $datas['content'] = $_POST['content'];
+    $datas['created'] = date("Y-m-d H:i:s");
+    $datas['updated'] = date("Y-m-d H:i:s");
 
-    var_dump($_POST);
+
+    $article = new Article($datas);
+
+    $result = $manager->updatedArticle($article);
+
+    if($result)
+            {
+                header("Location: index.php");
+            }
 
   }
 
 
 }
 
+function deletedArticle()
+{
+  $manager = new ArticleManager();
+
+  $result = $manager->deletedArticle($_GET['id']);
+
+  if($result)
+  {
+      header("Location: index.php");
+  }
+
+
+
+}
 
 //------------------------------- VIEW --------------------------------------------
 

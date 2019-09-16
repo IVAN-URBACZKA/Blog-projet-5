@@ -14,9 +14,6 @@
 
     <h2><?= $_SESSION['pseudo']; ?></h2>
 
-    <h2><?= $_SESSION['id']; ?></h2>
-
-
     <form id="formulaire" action="index.php?action=addarticle" method="post" >
 
     <label for="">Chapô</label>
@@ -28,7 +25,6 @@
     <textarea name="content" rows="4" cols="50">
     </textarea>
 
-    <input name="id"  type="hidden" value="777" >
 
     <input type="submit" value="envoyer">
 

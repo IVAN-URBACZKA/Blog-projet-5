@@ -29,3 +29,16 @@ function article()
     require('view/frontend/articleView.php');
 }
 
+function updatedArticleForm()
+{
+    $articleManager = new ArticleManager();
+   
+    $article = $articleManager->getArticle($_GET['id']);
+
+
+    require('view/frontend/articleViewUpdate.php');
+   
+}
+
+
+

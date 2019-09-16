@@ -5,6 +5,7 @@ class Article
 {
 
     private $_id;
+    private $_user_id;
     private $_chapo;
     private $_content;
     private $_created;
@@ -19,11 +20,12 @@ class Article
   {
     foreach ($donnees as $key => $value)
     {
-      $method = 'set'.ucfirst($key);
-      
+       $method = 'set'.ucfirst($key);
+
       if (method_exists($this, $method))
       {
         $this->$method($value);
+        
       }
     }
   }
@@ -32,31 +34,37 @@ class Article
 
   public function getId(){
 
-      return this->_id;
+      return $this->_id;
 
   }
 
+  public function getUserId(){
+
+    return $this->_user_id;
+
+}
+
   public function getChapo(){
 
-    return this->_chapo;
+    return $this->_chapo;
 
 }
 
 public function getContent(){
 
-    return this->_content;
+    return $this->_content;
 
 }
 
 public function getCreated(){
 
-    return this->_created;
+    return $this->_created;
 
 }
 
 public function getUpdated(){
 
-    return this->_updated;
+    return $this->_updated;
 
 }
 
@@ -68,6 +76,13 @@ public function setId($id)
   {
     $this->_id = $id;
   }
+}
+
+public function setUser_id($user_id)
+{
+ 
+    $this->_user_id = $user_id;
+  
 }
 
 public function setChapo($chapo)

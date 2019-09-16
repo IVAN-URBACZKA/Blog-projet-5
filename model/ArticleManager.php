@@ -2,6 +2,7 @@
 
 
 require_once("model/Manager.php"); 
+require_once("model/Article.php");
 
 
 class ArticleManager extends Manager{
@@ -24,9 +25,48 @@ class ArticleManager extends Manager{
     return $article;
 }
 
-Public function addArticle()
+    Public function addArticle($article)
+    {
+
+        $db = $this->dbConnect();
+        $req = $db->prepare('INSERT INTO articles (user_id,chapo,content,created,updated) VALUES (:user_id,:chapo,:content,:created,:updated)');
+        $req->bindValue (':user_id', $article->getUserId());
+        $req->bindValue (':chapo', $article->getchapo());
+        $req->bindValue (':content', $article->getContent());
+        $req->bindValue (':created', $article->getCreated());
+        $req->bindValue (':updated', $article->getUpdated());
+
+        $result = $req->execute();
+            
+        return $result;
+
+  }
+
+  public function updatedArticle($article){
+
+    $db = $this->dbConnect();
+    $req = $db->prepare('UPDATE articles SET chapo=:chapo,content=:content WHERE id= :id ');
+   
+        $req->bindValue (':id', $article->getId());
+        $req->bindValue (':chapo', $article->getchapo());
+        $req->bindValue (':content', $article->getContent());
+        
+        $result = $req->execute();
+
+        return $result;
+
+}
+
+
+public function deletedArticle($id)
 {
-    
+    $db = $this->dbConnect();
+    $req = $db->prepare('DELETE FROM `articles` WHERE id = :id');
+    $req->bindValue (':id', $id );
+    $result = $req->execute();
+    return $result;
+
+   
 }
 
 }
