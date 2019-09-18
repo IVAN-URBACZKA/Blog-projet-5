@@ -1,6 +1,8 @@
 <?php
 
 require_once('model/ArticleManager.php');
+require_once('model/CommentManager.php');
+require_once('model/UserManager.php');
 
 function listArticlesHome()
 {
@@ -22,9 +24,19 @@ function listArticlesBlog()
 
 function article()
 {
+    session_start();
+
     $articleManager = new ArticleManager();
-   
+
     $article = $articleManager->getArticle($_GET['id']);
+
+    $commentManager = new CommentManager();
+   
+    $comments = $commentManager->getComments();
+
+    $userManager = new UserManager();
+    
+    $user = $userManager->getUser($_GET['user_id']);
 
     require('view/frontend/articleView.php');
 }
@@ -39,6 +51,8 @@ function updatedArticleForm()
     require('view/frontend/articleViewUpdate.php');
    
 }
+
+
 
 
 

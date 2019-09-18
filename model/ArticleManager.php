@@ -10,7 +10,7 @@ class ArticleManager extends Manager{
     Public function getArticles()
 {
     $db = $this->dbConnect();
-    $req = $db->query('SELECT id, chapo , content,created , updated  FROM articles ORDER BY created DESC LIMIT 0, 5');
+    $req = $db->query('SELECT id,user_id, title,chapo , content,created , DATE_FORMAT(updated, \'%d/%m/%Y à %Hh%imin%ss\') AS updated_date_fr FROM articles ORDER BY created DESC LIMIT 0, 5');
 
     return $req;
 }
@@ -18,19 +18,20 @@ class ArticleManager extends Manager{
    Public function getArticle($articleId)
 {
     $db = $this->dbConnect();
-    $req = $db->prepare(' SELECT id, chapo , content, created , updated  FROM articles WHERE id = ?');
+    $req = $db->prepare(' SELECT id, title,chapo , content, created , DATE_FORMAT(updated, \'%d/%m/%Y à %Hh%imin%ss\') AS updated_date_fr  FROM articles WHERE id = ?');
     $req->execute(array($articleId));
     $article = $req->fetch();
 
     return $article;
 }
-
     Public function addArticle($article)
     {
 
         $db = $this->dbConnect();
-        $req = $db->prepare('INSERT INTO articles (user_id,chapo,content,created,updated) VALUES (:user_id,:chapo,:content,:created,:updated)');
+        $req = $db->prepare('INSERT INTO articles (user_id,title,chapo,content,created,updated) VALUES (:user_id,:title,:chapo,:content,:created,:updated)');
+        if ( 0 == $req->fetchColumn()){
         $req->bindValue (':user_id', $article->getUserId());
+        $req->bindValue (':title', $article->getTitle());
         $req->bindValue (':chapo', $article->getchapo());
         $req->bindValue (':content', $article->getContent());
         $req->bindValue (':created', $article->getCreated());
@@ -40,15 +41,18 @@ class ArticleManager extends Manager{
             
         return $result;
 
+        }
+
   }
 
   public function updatedArticle($article){
 
     $db = $this->dbConnect();
-    $req = $db->prepare('UPDATE articles SET chapo=:chapo,content=:content WHERE id= :id ');
+    $req = $db->prepare('UPDATE articles SET title=:title, chapo=:chapo,content=:content WHERE id= :id ');
    
         $req->bindValue (':id', $article->getId());
-        $req->bindValue (':chapo', $article->getchapo());
+        $req->bindValue (':title', $article->getTitle());
+        $req->bindValue (':chapo', $article->getChapo());
         $req->bindValue (':content', $article->getContent());
         
         $result = $req->execute();

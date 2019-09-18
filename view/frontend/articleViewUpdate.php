@@ -9,8 +9,13 @@
 
 <form id="formulaire" action="index.php?action=updatedarticle&amp;id=<?= $article['id']; ?>" method="post" >
 
+
+<label for="">Title</label>
+<input type="text" name="title">
+
 <label for="">Chapô</label>
 <input type="text" name="chapo">
+
 
 <br>
 

@@ -82,6 +82,14 @@ try {
                     }
 
 
+
+                    elseif($_GET['action'] == 'addcomment'){
+                        addComment();
+                    }
+
+
+
+
 }
 
 else {

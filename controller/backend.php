@@ -3,6 +3,7 @@
 require_once('model/UserManager.php');
 require_once('model/ConnexionManager.php');
 require_once('model/ArticleManager.php');
+require_once('model/CommentManager.php');
 
 //--------------------------------------------------------
 
@@ -97,9 +98,11 @@ function addArticle()
   
   if(isset($_POST['chapo'] ) & isset($_POST['content']))
   {
+    
     session_start();
     $datas = [];
     $datas['user_id'] = (int)$_SESSION['id'];
+    $datas['title'] = $_POST['title'];
     $datas['chapo'] = $_POST['chapo'];
     $datas['content'] = $_POST['content'];
     $datas['created'] = date("Y-m-d H:i:s");
@@ -128,6 +131,7 @@ function updatedArticle()
     session_start();
     $datas['id'] = $_GET['id'];
     $datas['user_id'] = (int)$_SESSION['id'];
+    $datas['title'] = $_POST['title'];
     $datas['chapo'] = $_POST['chapo'];
     $datas['content'] = $_POST['content'];
     $datas['created'] = date("Y-m-d H:i:s");
@@ -162,6 +166,43 @@ function deletedArticle()
 
 
 }
+
+//-------------------------------COMMENT-------------------------------------------
+
+function addComment()
+{
+  $manager = new CommentManager();
+
+  session_start();
+
+  if(isset($_POST['title'] ) & isset($_POST['content']) & isset($_SESSION['id']))
+  {
+    
+    session_start();
+    $datas = [];
+    $datas['user_id'] = (int)$_SESSION['id'];
+    $datas['title'] = $_POST['title'];
+    $datas['content'] = $_POST['content'];
+    $datas['created'] = date("Y-m-d H:i:s");
+
+    $comment = new Comment($datas);
+
+    $result = $manager->addComment($comment);
+
+    if($result)
+            {
+                header("Location: index.php");
+            }
+
+}
+
+else{
+  echo "vous devez être connecté ";
+}
+
+
+}
+
 
 //------------------------------- VIEW --------------------------------------------
 

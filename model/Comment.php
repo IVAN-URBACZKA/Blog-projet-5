@@ -1,16 +1,14 @@
 <?php
 
-class Article 
+class Comment
 
 {
 
     private $_id;
     private $_user_id;
     private $_title;
-    private $_chapo;
     private $_content;
     private $_created;
-    private $_updated;
 
     public function __construct(array $donnees)
   {
@@ -51,12 +49,6 @@ public function getTitle(){
 
 }
 
-  public function getChapo(){
-
-    return $this->_chapo;
-
-}
-
 public function getContent(){
 
     return $this->_content;
@@ -66,12 +58,6 @@ public function getContent(){
 public function getCreated(){
 
     return $this->_created;
-
-}
-
-public function getUpdated(){
-
-    return $this->_updated;
 
 }
 
@@ -99,14 +85,6 @@ public function setTitle($title)
   
 }
 
-public function setChapo($chapo)
-{
-  if (is_string($chapo))
-  {
-    $this->_chapo = $chapo;
-  }
-}
-
 public function setContent($content)
 {
   if (is_string($content))
@@ -119,13 +97,6 @@ public function setCreated($created)
 {
  
     $this->_created = $created;
-  
-}
-
-public function setUpdated($updated)
-{
- 
-    $this->_updated = $updated;
   
 }
 

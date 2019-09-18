@@ -42,6 +42,16 @@ class UserManager extends Manager
 
     }
 
+    Public function getUser($user_id)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('SELECT pseudo FROM users WHERE id = ?');
+        $req->execute(array($user_id));
+        $pseudo = $req->fetch();
+    
+        return $pseudo;
+    }
+
 }
 
 ?>
