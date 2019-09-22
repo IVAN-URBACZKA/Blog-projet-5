@@ -7,9 +7,9 @@ $href = "index.php?action=writeArticle";
 
 <?php ob_start(); ?>
 
-<div class="container">
+<div class="blog-container">
     <!-- Example row of columns -->
-    <div class="row">
+    <div class="blog-row">
 
 <?php
 while ($data = $articles->fetch())
@@ -21,7 +21,7 @@ while ($data = $articles->fetch())
       <div class="col-md-4 mb-sm-5">
       
         <h1><?= htmlspecialchars($data['title']) ?></h1>
-        <h2> <?= htmlspecialchars($data['chapo']) ?></h2>
+        <p><em><?= htmlspecialchars($data['chapo']) ?></em></p>
         <p><?= nl2br(htmlspecialchars($data['content'])) ?></p>
         <em><a class="btn btn-secondary" href="index.php?action=article&amp;id=<?= $data['id'] ?>&amp;user_id=<?= $data['user_id'] ?>">Voir l'article</a></em>
         

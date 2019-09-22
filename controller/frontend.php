@@ -44,7 +44,7 @@ function article()
 function updatedArticleForm()
 {
     $articleManager = new ArticleManager();
-   
+
     $article = $articleManager->getArticle($_GET['id']);
 
 

@@ -48,7 +48,7 @@ class ArticleManager extends Manager{
   public function updatedArticle($article){
 
     $db = $this->dbConnect();
-    $req = $db->prepare('UPDATE articles SET title=:title, chapo=:chapo,content=:content WHERE id= :id ');
+    $req = $db->prepare('UPDATE articles SET title=:title, chapo=:chapo,content=:content, updated=Now() WHERE id= :id ');
    
         $req->bindValue (':id', $article->getId());
         $req->bindValue (':title', $article->getTitle());

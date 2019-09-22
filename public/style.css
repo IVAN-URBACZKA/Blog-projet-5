@@ -1,0 +1,145 @@
+.jumbotron {
+  margin:0;
+  padding:0;
+  background: url("homepage") no-repeat center fixed;
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  height: 80vh;
+}
+
+.container{
+  background:  rgba(0, 0, 0, 0.8);
+  padding: 3%;
+}
+
+#homepage-container
+{
+  width: 60%;
+  margin: auto;
+}
+
+.blog-container
+{
+  display: flex;
+  justify-content: center;
+}
+
+.blog-row
+{
+  display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.blog-row div
+{
+  text-align:center;
+}
+
+
+#title-homepage
+{
+  text-align: center;
+  font-family: lato;
+  font-weight: bold;
+  
+}
+
+#intro-homepage
+{
+  text-align: center;
+  font-family: roboto;
+  font-size: 18px;
+
+}
+
+h1,h2,h3
+{
+  font-family: lato!important;
+}
+
+p
+{
+  font-family: roboto!important;
+  font-size: 18px!important;
+}
+
+footer
+{
+  background: black;
+}
+
+@media only screen and (min-width : 768px) 
+{
+
+  .blog-container
+{
+  display: flex;
+  justify-content: center;
+}
+
+.blog-row
+{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+   
+}
+
+}
+
+@media only screen and (min-width : 1024px) 
+{
+
+  .blog-container
+{
+  display: flex;
+  justify-content: center;
+}
+
+.blog-row
+{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+
+
+}
+
+@media only screen and (min-width : 1280px)
+{
+
+
+  
+}
+
+@media only screen and (min-width : 1336px) 
+{
+
+
+}
+
+@media only screen and (min-width : 1440px)
+ {
+
+
+
+}
+
+@media only screen and (min-width : 1680px) 
+{
+
+
+}
+
+@media only screen and (min-width : 1920px) {
+
+
+
+}

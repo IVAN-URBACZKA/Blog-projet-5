@@ -1,47 +1,22 @@
 <?php
-$title = "Le blog d'Ivan";
-$introduce = "Développeur web PHP";
+$title = "URBACZKA IVAN";
+$introduce = "Developpeur Web Freelance";
 $button = "En savoir plus";
-$href = "index.php?action=index.php";
+$href = "index.php";
  
  
  ?>
 
 <?php ob_start(); ?>
 
+<div class="mt-5" id="homepage-container">
 
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-    
+<h1 id="title-homepage" >Créateur de sites web et d’applications mobile sur-mesure.</h1>
 
-<?php
-while ($data = $articles->fetch())
-{
-?>
-   
+<p class="mt-3" id="intro-homepage">J’accompagne les Auto-entrepreneurs et les PME dans leur stratégie de marketing digital. Parce qu’un simple site web ne suffit plus, j’effectue aussi pour mes clients le référencement et les campagnes d’emailing pour leur entreprise.</p>
 
-   
-      <div class="col-md-4 mb-sm-5">
-        <h1><?= htmlspecialchars($data['title']) ?></h1>
-        <h2> <?= htmlspecialchars($data['chapo']) ?></h2>
-        <p><?= nl2br(htmlspecialchars($data['content'])) ?></p>
-        <em><a class="btn btn-secondary" href="index.php?action=article&amp;id=<?= $data['id'] ?>&amp;user_id=<?= $data['user_id'] ?>">Voir Article</a></em>
-        
-        
-      </div>
-     
-      
+ </div>
 
-
-<?php
-}
-$articles->closeCursor();
-?>
-
-</div>
-      </div>
-      
 <?php $content = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>

@@ -126,9 +126,11 @@ function updatedArticle()
 
   $manager = new ArticleManager();
 
-  if(isset($_POST['chapo'] ) & isset($_POST['content']))
+  session_start();
+
+
+  if(isset($_POST['chapo'] ) & isset($_POST['content'])  & isset($_SESSION['id']))
   {
-    session_start();
     $datas['id'] = $_GET['id'];
     $datas['user_id'] = (int)$_SESSION['id'];
     $datas['title'] = $_POST['title'];
@@ -149,21 +151,36 @@ function updatedArticle()
 
   }
 
+  else{
+    echo "vous devez être connecté ";
+  }
+
 
 }
 
 function deletedArticle()
 {
-  $manager = new ArticleManager();
 
-  $result = $manager->deletedArticle($_GET['id']);
+   session_start();
 
-  if($result)
-  {
-      header("Location: index.php");
-  }
+   if(!isset($_SESSION['id'])){
+     echo "Tu dois créer un compte";
+   }
+
+   else{
+
+       $manager = new ArticleManager();
+
+   $result = $manager->deletedArticle($_GET['id']);
+
+   if($result)
+   {
+       header("Location: index.php");
+   }
 
 
+
+   }
 
 }
 
@@ -178,7 +195,6 @@ function addComment()
   if(isset($_POST['title'] ) & isset($_POST['content']) & isset($_SESSION['id']))
   {
     
-    session_start();
     $datas = [];
     $datas['user_id'] = (int)$_SESSION['id'];
     $datas['title'] = $_POST['title'];
