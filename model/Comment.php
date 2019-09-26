@@ -5,6 +5,7 @@ class Comment
 {
 
     private $_id;
+    private $_article_id;
     private $_user_id;
     private $_title;
     private $_content;
@@ -36,6 +37,12 @@ class Comment
       return $this->_id;
 
   }
+
+  public function getArticleId(){
+
+    return $this->_article_id;
+
+}
 
   public function getUserId(){
 
@@ -69,6 +76,13 @@ public function setId($id)
   {
     $this->_id = $id;
   }
+}
+
+public function setArticle_id($article_id)
+{
+ 
+    $this->_article_id = $article_id;
+  
 }
 
 public function setUser_id($user_id)

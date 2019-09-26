@@ -32,7 +32,7 @@ function article()
 
     $commentManager = new CommentManager();
    
-    $comments = $commentManager->getComments();
+    $comment = $commentManager->getComments($_GET['id']);
 
     $userManager = new UserManager();
     
@@ -47,11 +47,24 @@ function updatedArticleForm()
 
     $article = $articleManager->getArticle($_GET['id']);
 
-
     require('view/frontend/articleViewUpdate.php');
    
 }
 
+function contact()
+{
+    require('view/frontend/contact.php');
+}
+
+function about()
+{
+    require('view/frontend/about.php');
+}
+
+function mandatoryregistration()
+{
+    require('view/frontend/mandatoryregistration.php');
+}
 
 
 

@@ -72,6 +72,380 @@ footer
   background: black;
 }
 
+.wrapper{
+  position: relative;
+  clear:both;
+  margin: 0 auto 75px auto;
+  width: 100%;
+  overflow: hidden;
+}
+.top{
+  background: #FF4444;
+  height: 180px;
+  border-top: 20px solid #CC0000;
+}
+
+.top .title {
+  width: 700px;
+  margin: 38px auto 0 auto; 
+}
+
+.title h1 {
+  font-size:24px;
+  color:#FFF;
+  font-weight:500;
+}
+
+.content{
+  padding-bottom: 20px;
+}
+
+.content .card.first {
+  margin-top: -80px;
+}
+
+.card{
+  position: relative;
+  background: #fff;
+  padding:50px;
+  width: 340px;
+  margin: 20px auto 0 auto;
+  box-shadow: 0 2px 4px rgba(100,100,100,.1);
+}
+
+.card h2 {
+  font-size:21px;
+  font-weight:500;
+}
+
+.card h2 a {
+  color:#CC0000;
+  text-decoration:none;
+}
+
+.card .date {
+  color:#9e9e9e;
+  margin-top:10px;
+  font-size:14px;
+}
+
+.card .text {
+  color:#212121;
+  margin-top:20px;
+  font-size:15px;
+  line-height:22px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+
+.comments{
+  padding:20px;
+}
+
+.comments article.comment {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.comments article.comment .meta{
+  height: 60px;
+  margin-bottom: 17px;
+  position: relative; 
+}
+
+.comments article.comment .meta img.avatar {
+  position: absolute;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+}
+
+.comments article.comment .meta a.author,
+.comments article.comment .meta a.date {
+  text-decoration: none;
+  position: absolute;
+}
+
+.comments article.comment .meta a.author {
+  color: inherit;
+  left: 73px;
+  line-height: 29px;
+  padding: 0px 7px;
+  top: 3px;
+}
+
+.comments article.comment .meta a.date {
+  font-size: 14px;
+  line-height: 19px;
+  color: #666666;
+  left: 80px;
+  top: 35px;
+}
+
+.comments article.comment .content {
+  background-color: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  padding: 22px 25px;
+  position: relative;
+}
+
+.comments article.comment .content:after, 
+.comments article.comment .content:before {
+	bottom: 100%;
+	left: 30px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.comments article.comment .content:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 12px;
+	margin-left: -12px;
+}
+.comments article.comment .content:before {
+	border-color: rgba(245, 47, 47, 0);
+	border-bottom-color: #DADADA;
+	border-width: 13px;
+	margin-left: -13px;
+}
+
+#feedback-page{
+	text-align:center;
+}
+
+#text-feedback{
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color:white;
+	text-align:center;
+}
+
+#form-main{
+	width:100%;
+	float:left;
+	padding-top:30px;
+}
+
+#form-div {
+	background-color:#3c3c3c;
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:50px;
+	width: 450px;
+	float: left;
+	left: 50%;
+	position: absolute;
+	margin-left: -260px;
+}
+
+.feedback-input {
+	opacity:0.9;
+	color:#0493bd;
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight:400;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+  border: 3px solid #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#name:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#comment{
+	background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	line-height: 150%;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+#button-blue{
+	font-family: 'Montserrat', Helvetica, Arial,  sans-serif;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+	
+.submit:hover {
+	color: #3498db;
+}
+	
+.ease {
+  border-top:3px #3c3c3c solid;
+	width: 0px;
+	height: 76px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+main {
+  text-align: center;
+}
+#image {
+  max-width: 100%;
+  display: block;
+  height: auto; 
+}
+.center {
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#detay{
+ text-align: center;
+
+}
+
+#detay p{
+  font-family: roboto!important;
+ 
+ }
+
+#profil{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+  padding: 5%;
+}
+
+#comments{
+  border: 1px solid black;
+  padding: 5%;
+  margin: 1%;
+  border-radius: 1%;
+}
+
+#comments h1
+{
+  background: #212121;
+  color:white;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+}
+
+#social{
+  text-align: center;
+}
+
+#form-color{
+  background: crimson;
+  height: 100vh;
+}
+
+#form-color h1{
+  color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
 @media only screen and (min-width : 768px) 
 {
 
@@ -88,6 +462,23 @@ footer
     flex-wrap: wrap;
     
    
+}
+
+.card{
+ 
+  width: 560px;
+  
+}
+
+#comments{
+
+  padding: 2%;
+  margin: 1%;
+}
+
+#comments h1
+{
+   font-size: 25px;
 }
 
 }
@@ -109,13 +500,35 @@ footer
    
 }
 
+.card{
+ 
+  width: 600px;
+  
+}
+
+#comments
+{
+  width: 40%;
+  margin:auto;
+  margin-bottom: 5%;
+
+}
+
+#comments h1
+{
+  font-size: 30px;
+
+}
 
 }
 
 @media only screen and (min-width : 1280px)
 {
 
-
+footer
+{
+  display: flex;
+}
   
 }
 

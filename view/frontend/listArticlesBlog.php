@@ -16,8 +16,6 @@ while ($data = $articles->fetch())
 {
 ?>
    
-
-   
       <div class="col-md-4 mb-sm-5">
       
         <h1><?= htmlspecialchars($data['title']) ?></h1>
@@ -27,9 +25,6 @@ while ($data = $articles->fetch())
         
       </div>
      
-      
-
-
 <?php
 }
 

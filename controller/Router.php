@@ -87,8 +87,17 @@ try {
                         addComment();
                     }
 
+                    elseif ($_GET['action'] == 'contact') {
+                        contact();
+                    }
 
+                    elseif ($_GET['action'] == 'about') {
+                        about();
+                    }
 
+                    elseif ($_GET['action'] == 'mandatoryregistration') {
+                        mandatoryregistration();
+                    }
 
 }
 

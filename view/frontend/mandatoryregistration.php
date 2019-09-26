@@ -14,26 +14,12 @@
 
   <?php include("includes/header.php") ?>
 
-<div id="form-color">
+  <div id="form-color">
 
-<form class="d-flex flex-column align-items-center"  action="index.php?action=updatedarticle&amp;id=<?= $article['id']; ?>" method="post" >
-
-<label class="text-white" for="">Title</label>
-<input type="text" name="title">
-
-<label class="text-white" for="">Chapô</label>
-<input class="w-25" type="text" name="chapo">
+  <h1 class="d-flex justify-content-center  mb-2">Vous devez être connecté pour modifier un commentaire</h1>
 
 
-<br>
-
-<label class="text-white" for="">Content</label>
-<textarea class="w-25 mb-2" name="content" rows="2" cols="20">
-</textarea>
-
-<button type="submit" class="btn btn-primary">Submit</button>
-    
-</div>
+  </div>
 
     
   <!-- Optional JavaScript -->

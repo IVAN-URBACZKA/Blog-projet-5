@@ -98,8 +98,8 @@ function addArticle()
   
   if(isset($_POST['chapo'] ) & isset($_POST['content']))
   {
-    
     session_start();
+
     $datas = [];
     $datas['user_id'] = (int)$_SESSION['id'];
     $datas['title'] = $_POST['title'];
@@ -107,6 +107,7 @@ function addArticle()
     $datas['content'] = $_POST['content'];
     $datas['created'] = date("Y-m-d H:i:s");
     $datas['updated'] = date("Y-m-d H:i:s");
+   
 
     $article = new Article($datas);
 
@@ -117,7 +118,6 @@ function addArticle()
                 header("Location: index.php");
             }
 }
-
 
 }
 
@@ -152,7 +152,7 @@ function updatedArticle()
   }
 
   else{
-    echo "vous devez être connecté ";
+    header("Location: index.php?action=mandatoryregistration");
   }
 
 
@@ -163,6 +163,8 @@ function deletedArticle()
 
    session_start();
 
+   
+
    if(!isset($_SESSION['id'])){
      echo "Tu dois créer un compte";
    }
@@ -170,8 +172,8 @@ function deletedArticle()
    else{
 
        $manager = new ArticleManager();
-
-   $result = $manager->deletedArticle($_GET['id']);
+       
+       $result = $manager->deletedArticle((int)$_GET['id']);
 
    if($result)
    {
@@ -194,8 +196,9 @@ function addComment()
 
   if(isset($_POST['title'] ) & isset($_POST['content']) & isset($_SESSION['id']))
   {
-    
+      
     $datas = [];
+    $datas['article_id'] = (int)$_POST['id'];
     $datas['user_id'] = (int)$_SESSION['id'];
     $datas['title'] = $_POST['title'];
     $datas['content'] = $_POST['content'];
@@ -203,19 +206,19 @@ function addComment()
 
     $comment = new Comment($datas);
 
-    $result = $manager->addComment($comment);
+   $result = $manager->addComment($comment);
+
 
     if($result)
             {
-                header("Location: index.php");
+                header("Location: index.php?action=blog");
             }
-
+      
 }
 
 else{
   echo "vous devez être connecté ";
 }
-
 
 }
 

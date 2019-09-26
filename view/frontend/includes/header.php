@@ -21,11 +21,11 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.php?action=listArticles">Contact</a>
+        <a class="nav-link" href="index.php?action=contact">Contact</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.php?action=listArticles">Qui-suis-je?</a>
+        <a class="nav-link" href="index.php?action=about">Qui-suis-je?</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -68,11 +68,11 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.php?action=listArticles">Contact</a>
+      <a class="nav-link" href="index.php?action=contact">Contact</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.php?action=listArticles">Qui-suis-je?</a>
+      <a class="nav-link" href="index.php?action=about">Qui-suis-je?</a>
       </li>
 
       <li class="nav-item dropdown">

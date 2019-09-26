@@ -65,12 +65,11 @@ class ArticleManager extends Manager{
 public function deletedArticle($id)
 {
     $db = $this->dbConnect();
-    $req = $db->prepare('DELETE FROM `articles` WHERE id = :id');
-    $req->bindValue (':id', $id );
+    $req = $db->prepare('DELETE FROM articles WHERE id=:id');
+    $req->bindValue (':id', $id);
     $result = $req->execute();
     return $result;
-
-   
+    
 }
 
 }
