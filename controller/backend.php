@@ -139,7 +139,6 @@ function updatedArticle()
     $datas['created'] = date("Y-m-d H:i:s");
     $datas['updated'] = date("Y-m-d H:i:s");
 
-
     $article = new Article($datas);
 
     $result = $manager->updatedArticle($article);
@@ -155,15 +154,12 @@ function updatedArticle()
     header("Location: index.php?action=mandatoryregistration");
   }
 
-
 }
 
 function deletedArticle()
 {
 
    session_start();
-
-   
 
    if(!isset($_SESSION['id'])){
      echo "Tu dois créer un compte";
@@ -179,8 +175,6 @@ function deletedArticle()
    {
        header("Location: index.php");
    }
-
-
 
    }
 
@@ -206,9 +200,8 @@ function addComment()
 
     $comment = new Comment($datas);
 
-   $result = $manager->addComment($comment);
-
-
+    $result = $manager->addComment($comment);
+     
     if($result)
             {
                 header("Location: index.php?action=blog");
@@ -221,7 +214,6 @@ else{
 }
 
 }
-
 
 //------------------------------- VIEW --------------------------------------------
 
@@ -259,6 +251,11 @@ else
   echo '<a href="index.php">Vous devez possédez un compte pour écrire un article</a>';
 
 }
+}
+
+function validation()
+{
+  require("view/frontend/valid.php");
 }
 
 //---------------------------------------------------------------------------------
