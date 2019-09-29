@@ -7,6 +7,7 @@ require_once('model/UserManager.php');
 function listArticlesHome()
 {
     $articleManager = new ArticleManager();
+    
     $articles = $articleManager->getArticles();
 
     require('view/frontend/listArticlesHome.php');

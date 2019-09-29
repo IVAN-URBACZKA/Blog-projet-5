@@ -212,10 +212,14 @@ else{
 }
 
 function validTrue(){
+
   $manager = new CommentManager();
 
-  var_dump($_GET['validation'],$_GET['id']);
-  $result = $manager->updatedValidation($_GET['validation'],$_GET['id']);
+  if(isset($_GET['validation']) && isset($_GET['id']))
+  {
+    $result = $manager->updatedValidation($_GET['validation'],$_GET['id']);
+  }
+
   if($result)
             {
                 header("Location: index.php");

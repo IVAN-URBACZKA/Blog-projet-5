@@ -16,10 +16,10 @@
   <div class="top"><div class="title"><h1><?php echo $article['title']; ?></h1></div></div>
   <div class="content">
     <div class="card first">
-    <h2><a href="#"><?php echo $user['pseudo']; ?></a></h2>
-    <h2><a href="#"><?php echo $article['chapo']; ?></a></h2>
-      <p class="date"><?php echo $article['updated_date_fr']; ?></p>
-      <p class="text"><?php echo $article['content']; ?> <br></p>
+    <h2><a href="#"><?= htmlspecialchars($user['pseudo']); ?></a></h2>
+    <h2><a href="#"><?= htmlspecialchars($article['chapo']); ?></a></h2>
+      <p class="date"><?= htmlspecialchars($article['updated_date_fr']); ?></p>
+      <p class="text"><?= htmlspecialchars($article['content']); ?> <br></p>
       <em><a href="index.php?action=updatedarticleform&amp;id=<?= $article['id']; ?>">Modifier l'article</a></em>
 
 <em><a href="index.php?action=deletedarticle&amp;id=<?= $article['id']; ?>">Supprimer l'article</a></em>
@@ -64,8 +64,8 @@ while ($data = $comment->fetch())
    
       <div id="comments">
 
-      <h1><?php echo $user['pseudo']; ?></h1>
-       <h2><?= htmlspecialchars($data['title']) ?></h2>
+      <h1><?= htmlspecialchars($user['pseudo']); ?></h1>
+       <h2><?= htmlspecialchars($data['title']); ?></h2>
        <p><?= nl2br(htmlspecialchars($data['content'])) ?></p>
         
       </div>
