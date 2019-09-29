@@ -15,10 +15,10 @@ function listArticlesHome()
 function listArticlesBlog()
 {
     $articleManager = new ArticleManager();
+
     $articles = $articleManager->getArticles();
-
+    
     require('view/frontend/listArticlesBlog.php');
-
 
 }
 

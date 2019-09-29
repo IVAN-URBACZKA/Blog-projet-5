@@ -1,4 +1,3 @@
-  
 <?php
 session_start();
 session_unset();
@@ -19,7 +18,6 @@ session_destroy();
   </head>
   <body>
 
-
 <div id="form-color">
 
   <h1 class="d-flex justify-content-center mb-2">Vous êtes désormais déconnecté</h1>
@@ -27,7 +25,6 @@ session_destroy();
   <a class="d-flex justify-content-center mb-2 text-white" href="index.php?action=listArticles">Revenir à l'accueil</a>
 
 </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -14,7 +14,6 @@
 
   <?php include("includes/header.php") ?>
 
-
   <div id="form-color">
   
   <h1 class="d-flex justify-content-center  mb-2">Inscription</h1>
@@ -32,7 +31,6 @@
 </form>
 
 </div>
-
 
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

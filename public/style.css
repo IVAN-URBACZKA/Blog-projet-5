@@ -249,7 +249,7 @@ h1,h2,h3,h4,h5,h6{
 	padding-left:35px;
 	padding-right:35px;
 	padding-top:35px;
-	padding-bottom:50px;
+	padding-bottom: 20px;
 	width: 450px;
 	float: left;
 	left: 50%;
@@ -397,11 +397,12 @@ main {
 #detay{
   
  text-align: center;
- width: 50%;
+ width: 70%;
  background: crimson;
  margin: auto;
  color:white;
  padding:1%;
+ border-radius:5px;
 }
 
 #detay p{

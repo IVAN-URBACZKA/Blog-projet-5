@@ -15,7 +15,6 @@
     
   <?php include("includes/header.php") ?>
 
-
 <div id="content">
 
         <div id="profil">
@@ -24,14 +23,13 @@
 
         <div id="detay">
 
-            <p>URBACZKA IVAN développeur web à Douai. Jeune entrepreneur, je réalise les projets web pour des clients du monde entier (Etats-Unis, Europe, Afrique).</p>
+            <p>Développeur web à Douai. Jeune entrepreneur, je réalise les projets web pour des clients du monde entier (Etats-Unis, Europe, Afrique).</p>
 
         </div>
 
     </div>
     
 <?php include("includes/footer.php") ?>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

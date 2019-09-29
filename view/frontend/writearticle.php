@@ -11,9 +11,7 @@
   </head>
   <body>
     
-
   <div id="form-color">
-
 
     <h1 class="d-flex flex-column align-items-center">Ecrire un article </h1>
 
@@ -35,7 +33,6 @@
 
 
     <button type="submit" class="btn btn-primary">Submit</button>
-
 
     <form>
 

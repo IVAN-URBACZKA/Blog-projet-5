@@ -24,7 +24,6 @@
 
 <em><a href="index.php?action=deletedarticle&amp;id=<?= $article['id']; ?>">Supprimer l'article</a></em>
 
-      
     </div>
     </div>
     </div>
@@ -39,8 +38,6 @@
 
     <input type="text" name="title">
 
- 
-
     <br>
 
     <label for="">Content</label>    <br>
@@ -52,10 +49,7 @@
     <input name="id" type="hidden" value='<?php echo $article['id']; ?>'>
     <input name="validation" type="hidden" value='0'>
 
-    
-
     <input type="submit" value="envoyer">
-
 
     <form>
 
@@ -81,8 +75,6 @@ while ($data = $comment->fetch())
 
 $comment->closeCursor();
 ?>
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

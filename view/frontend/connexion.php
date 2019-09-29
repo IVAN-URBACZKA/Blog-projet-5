@@ -12,7 +12,6 @@
   </head>
   <body> 
   
-
   <?php include("includes/header.php") ?>
 
 <div id="form-color">

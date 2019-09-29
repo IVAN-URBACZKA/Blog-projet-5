@@ -81,8 +81,6 @@ try {
                     
                     }
 
-
-
                     elseif($_GET['action'] == 'addcomment'){
                         addComment();
                     }
@@ -117,14 +115,11 @@ else {
 
 }
 
-
-
 catch(Exception $e) {
     echo 'Erreur : ' . $e->getMessage();
 }
 
 }
-
 
 }
      

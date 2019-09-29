@@ -1,5 +1,4 @@
 <?php
-
 require_once('model/UserManager.php');
 require_once('model/ConnexionManager.php');
 require_once('model/ArticleManager.php');
@@ -84,7 +83,6 @@ function connexion()
          
          }
 
-    
 }
 
 }
@@ -107,7 +105,6 @@ function addArticle()
     $datas['created'] = date("Y-m-d H:i:s");
     $datas['updated'] = date("Y-m-d H:i:s");
    
-
     $article = new Article($datas);
 
     $result = $manager->addArticle($article);
@@ -126,7 +123,6 @@ function updatedArticle()
   $manager = new ArticleManager();
 
   session_start();
-
 
   if(isset($_POST['chapo'] ) & isset($_POST['content'])  & isset($_SESSION['id']))
   {

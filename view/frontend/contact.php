@@ -14,7 +14,6 @@
     
   <?php include("includes/header.php") ?>
 
-
   <div id="form-main">
   <div id="form-div">
     <form class="form" id="form1" action="https://formspree.io/ivan.urbaczka@gmail.com" method="POST">
@@ -43,8 +42,6 @@
     </form>
   </div>
   </div>
-
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
