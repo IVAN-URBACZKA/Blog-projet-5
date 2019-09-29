@@ -99,6 +99,16 @@ try {
                         mandatoryregistration();
                     }
 
+                    elseif ($_GET['action'] == 'commentsvalidation') {
+                        commentsValidation();
+                    }
+
+                    elseif ($_GET['action'] == 'validTrue') {
+                       
+                            validTrue();
+                        
+                    }
+
 }
 
 else {

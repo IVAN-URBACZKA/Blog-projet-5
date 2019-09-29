@@ -11,13 +11,14 @@
     <title>Le blog D'ivan</title>
   </head>
   <body> 
+  
 
   <?php include("includes/header.php") ?>
 
 <div id="form-color">
   
-  <h1 class="d-flex justify-content-center  mb-2">Inscription</h1>
-
+  <h1 class="d-flex justify-content-center  mb-2">Connexion</h1>
+  
 <form class="d-flex justify-content-center"  action="index.php?action=connexion" method="post" >
   <div class="form-group">
 
@@ -28,7 +29,6 @@
 
 </div>
 
-    
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

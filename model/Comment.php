@@ -7,6 +7,7 @@ class Comment
     private $_id;
     private $_article_id;
     private $_user_id;
+    private $_validation;
     private $_title;
     private $_content;
     private $_created;
@@ -50,6 +51,12 @@ class Comment
 
 }
 
+public function getValidation(){
+
+  return $this->_validation;
+
+}
+
 public function getTitle(){
 
   return $this->_title;
@@ -89,6 +96,13 @@ public function setUser_id($user_id)
 {
  
     $this->_user_id = $user_id;
+  
+}
+
+public function setValidation($validation)
+{
+ 
+    $this->_validation = $validation;
   
 }
 

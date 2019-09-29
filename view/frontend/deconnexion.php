@@ -1,10 +1,8 @@
-<?php 
-
+  
+<?php
 session_start();
-
-$_SESSION = array();
+session_unset();
 session_destroy();
-
 ?>
 
 <!doctype html>
@@ -21,7 +19,8 @@ session_destroy();
   </head>
   <body>
 
-  <div id="form-color">
+
+<div id="form-color">
 
   <h1 class="d-flex justify-content-center mb-2">Vous êtes désormais déconnecté</h1>
   

@@ -50,6 +50,8 @@
     <br>
 
     <input name="id" type="hidden" value='<?php echo $article['id']; ?>'>
+    <input name="validation" type="hidden" value='0'>
+
     
 
     <input type="submit" value="envoyer">

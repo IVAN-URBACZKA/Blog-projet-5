@@ -66,6 +66,16 @@ function mandatoryregistration()
     require('view/frontend/mandatoryregistration.php');
 }
 
+function commentsValidation()
+{
+
+    $commentManager = new CommentManager();
+   
+    $comments = $commentManager->getCommentsValidation();
+
+    require('view/frontend/commentsvalidation.php');
+}
+
 
 
 

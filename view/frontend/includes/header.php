@@ -1,6 +1,7 @@
 <?php session_start(); 
 
-if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){ 
+if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
+{ 
 ?>
    
    <nav class="navbar justify-content-between  navbar-dark bg-dark">
@@ -35,6 +36,15 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       
           <a class="dropdown-item" href="index.php?action=deconnexion">Déconnexion</a>
+          <?php 
+
+if(isset($_SESSION['id']) && $_SESSION['id'] == 32 ){
+  ?>
+    <a class="dropdown-item" href="index.php?action=commentsvalidation">Valid comments</a>
+    <?php
+        } 
+
+        ?>
 
       </li>
     

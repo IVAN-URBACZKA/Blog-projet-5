@@ -55,14 +55,13 @@ function connexion()
 
   if(isset($_POST['pseudo_connexion'] ) & isset($_POST['pass_connexion'])){
 
-
          $manager = new ConnexionManager();
 
          $result = $manager->getConnexion($_POST['pseudo_connexion']);
 
          $isPasswordCorrect = password_verify($_POST['pass_connexion'], $result['pass']);
 
-         if (!$result)
+          if (!$result)
          {
              echo 'Mauvais identifiant ou mot de passe !';
          }
@@ -194,6 +193,7 @@ function addComment()
     $datas = [];
     $datas['article_id'] = (int)$_POST['id'];
     $datas['user_id'] = (int)$_SESSION['id'];
+    $datas['validation'] = $_POST['validation'];
     $datas['title'] = $_POST['title'];
     $datas['content'] = $_POST['content'];
     $datas['created'] = date("Y-m-d H:i:s");
@@ -215,6 +215,17 @@ else{
 
 }
 
+function validTrue(){
+  $manager = new CommentManager();
+
+  var_dump($_GET['validation'],$_GET['id']);
+  $result = $manager->updatedValidation($_GET['validation'],$_GET['id']);
+  if($result)
+            {
+                header("Location: index.php");
+            }
+}
+
 //------------------------------- VIEW --------------------------------------------
 
 function register()
@@ -234,7 +245,7 @@ function loginForm()
 
 function deconnexion()
 {
-  require("view/frontend/deconnexion.php");
+ require("view/frontend/deconnexion.php");
 }
 
 function writeArticle()
@@ -251,11 +262,6 @@ else
   echo '<a href="index.php">Vous devez possédez un compte pour écrire un article</a>';
 
 }
-}
-
-function validation()
-{
-  require("view/frontend/valid.php");
 }
 
 //---------------------------------------------------------------------------------
