@@ -16,11 +16,11 @@ while ($data = $articles->fetch())
 {
 ?>
    
-      <div class="col-md-4 mb-sm-5">
+      <div id="article-blog" class="col-md-4 mb-sm-5">
       
         <h1><?= htmlspecialchars($data['title']) ?></h1>
         <p><em><?= htmlspecialchars($data['chapo']) ?></em></p>
-        <p><?= nl2br(htmlspecialchars($data['content'])) ?></p>
+        <p class="foo" ><?= nl2br(htmlspecialchars($data['content'])) ?></p>
         <em><a class="btn btn-secondary" href="index.php?action=article&amp;id=<?= $data['id'] ?>&amp;user_id=<?= $data['user_id'] ?>">Voir l'article</a></em>
         
       </div>

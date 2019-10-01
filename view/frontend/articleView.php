@@ -64,7 +64,6 @@ while ($data = $comment->fetch())
    
       <div id="comments">
 
-      <h1><?= htmlspecialchars($user['pseudo']); ?></h1>
        <h2><?= htmlspecialchars($data['title']); ?></h2>
        <p><?= nl2br(htmlspecialchars($data['content'])) ?></p>
         

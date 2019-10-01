@@ -9,6 +9,19 @@
   height: 80vh;
 }
 
+.foo {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#article-blog
+{
+  border: 5px solid white;
+  padding: 1%;
+  background: gainsboro;
+}
+
 .container{
   background:  rgba(0, 0, 0, 0.8);
   padding: 3%;

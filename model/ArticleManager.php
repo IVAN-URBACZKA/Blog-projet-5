@@ -8,7 +8,7 @@ class ArticleManager extends Manager{
     Public function getArticles()
 {
     $db = $this->dbConnect();
-    $req = $db->query('SELECT id,user_id, title,chapo , content,created , DATE_FORMAT(updated, \'%d/%m/%Y à %Hh%imin%ss\') AS updated_date_fr FROM articles ORDER BY created DESC LIMIT 0, 5');
+    $req = $db->query('SELECT id,user_id, title,chapo , content,created , DATE_FORMAT(updated, \'%d/%m/%Y à %Hh%imin%ss\') AS updated_date_fr FROM articles ORDER BY created DESC LIMIT 0, 6');
 
     return $req;
 }

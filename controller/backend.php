@@ -222,7 +222,7 @@ function validTrue(){
 
   if($result)
             {
-                header("Location: index.php");
+                header("Location: index.php?action=blog");
             }
 }
 

@@ -23,7 +23,9 @@
 
         <div id="detay">
 
-            <p>Développeur web à Douai. Jeune entrepreneur, je réalise les projets web pour des clients du monde entier (Etats-Unis, Europe, Afrique).</p>
+            <h1><strong>Développeur Web à Douai.<strong></h1>
+            <p><strong>Jeune entrepreneur, je réalise les projets web pour des clients du monde entier (Etats-Unis, Europe, Afrique).<strong></p>
+
 
         </div>
 
