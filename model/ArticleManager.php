@@ -1,7 +1,7 @@
 <?php
 
-require_once("model/Manager.php"); 
-require_once("model/Article.php");
+require_once "model/Manager.php" ; 
+require_once "model/Article.php" ;
 
 class ArticleManager extends Manager{
 
