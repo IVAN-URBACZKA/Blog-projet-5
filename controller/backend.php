@@ -1,8 +1,8 @@
 <?php
-require_once('model/UserManager.php');
-require_once('model/ConnexionManager.php');
-require_once('model/ArticleManager.php');
-require_once('model/CommentManager.php');
+require_once 'model/UserManager.php';
+require_once 'model/ConnexionManager.php';
+require_once 'model/ArticleManager.php';
+require_once 'model/CommentManager.php';
 
 //--------------------------------------------------------
 
