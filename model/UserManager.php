@@ -3,6 +3,7 @@
 require_once "model/Manager.php" ; 
 require_once "model/User.php" ;
 
+// UserManager let us manage new user in connection
 class UserManager extends Manager
 
 {
